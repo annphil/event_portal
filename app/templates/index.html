@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hey, {{ current_user.username }}!</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+         <p>
+            {{ form.post.label }}<br>
+            {{ form.post(cols=32, rows=4) }}<br>
+            {% for error in form.post.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+         </p>
+         <p>
+          {{ form.date.label }}<br>
+          {{ form.date(size=32) }}
+          {% for error in form.date.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+         </p>
+         <p>
+          {{ form.time.label }}<br>
+          {{ form.time(size=32) }}
+          {% for error in form.time.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+         </p>
+         <p>{{ form.submit() }}</p>
+    </form>
+
+    <p>{{Events}}  </p>
+    {% for event in events %}
+    <div>
+      <p>
+        Event : <b>{{ event.name }}</b> <br>
+        Date: {{ event.date }} <br>
+        Time: {{ event.time }} <br>
+        Register <a href="https://forms.gle/gvCH35FLkEjK1Wfw9" target="_blank">Here</a>
+      </p>
+    </div>
+    {% endfor %}
+{% endblock %}
