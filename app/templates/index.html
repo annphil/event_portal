@@ -2,6 +2,7 @@
 
 {% block content %}
     <h1>Hey, {{ current_user.username }}!</h1>
+    <h2> Create Event </h2>
     <form action="" method="post">
         {{ form.hidden_tag() }}
          <p>
@@ -25,17 +26,24 @@
           <span style="color: red;">[{{ error }}]</span>
           {% endfor %}
          </p>
+         <p>
+          {{ form.regLink.label }}<br>
+          {{ form.regLink(size=56) }}
+          {% for error in form.time.errors %}
+          <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+         </p>
          <p>{{ form.submit() }}</p>
     </form>
 
-    <p>{{Events}}  </p>
+    <h2> Events </h2>
     {% for event in events %}
     <div>
       <p>
         Event : <b>{{ event.name }}</b> <br>
         Date: {{ event.date }} <br>
         Time: {{ event.time }} <br>
-        Register <a href="https://forms.gle/gvCH35FLkEjK1Wfw9" target="_blank">Here</a>
+        Register using  {{ event.regLink }}
       </p>
     </div>
     {% endfor %}

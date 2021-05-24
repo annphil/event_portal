@@ -11,7 +11,7 @@ from werkzeug.urls import url_parse
 def index():
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(name=form.post.data, date=form.date.data, time=form.time.data)
+        post = Post(name=form.post.data, date=form.date.data, time=form.time.data, regLink=form.regLink.data)
         db.session.add(post)
         db.session.commit()
         flash('Your event is now live!')

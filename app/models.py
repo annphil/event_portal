@@ -29,6 +29,7 @@ class Post(db.Model):
     name = db.Column(db.String(140), index=True, unique=True)
     date = db.Column(db.String(140))
     time = db.Column(db.String(140))
+    regLink = db.Column(db.VARCHAR(20000), index=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
