@@ -1,0 +1,94 @@
+2021-05-25 22:12:14,497 INFO: Evenza startup [in E:\Python Projects\Eventza4\event_portal\app\__init__.py:29]
+2021-05-25 22:14:23,826 INFO: Evenza startup [in E:\Python Projects\Eventza4\event_portal\app\__init__.py:29]
+2021-05-25 22:14:51,715 ERROR: Exception on /login [POST] [in e:\python projects\eventza\venv\lib\site-packages\flask\app.py:1440]
+Traceback (most recent call last):
+  File "e:\python projects\eventza\venv\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x00000159F1625720 (otid=0x00000159F15D7F40) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\python projects\eventza\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\python projects\eventza\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\python projects\eventza\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\python projects\eventza\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "E:\Python Projects\Eventza4\event_portal\app\routes.py", line 28, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "e:\python projects\eventza\venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 129, in __call__
+    return self.registry()
+  File "e:\python projects\eventza\venv\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "e:\python projects\eventza\venv\lib\site-packages\sqlalchemy\orm\session.py", line 4065, in __call__
+    return self.class_(**local_kw)
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 593, in get_engine
+    sa_url, options = self.get_options(sa_url, echo)
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 608, in get_options
+    sa_url, options = self._sa.apply_driver_hacks(self._app, sa_url, options)
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 933, in apply_driver_hacks
+    if sa_url.drivername.startswith('mysql'):
+AttributeError: 'NoneType' object has no attribute 'drivername'
+2021-05-25 22:15:27,235 ERROR: Exception on /register [POST] [in e:\python projects\eventza\venv\lib\site-packages\flask\app.py:1440]
+Traceback (most recent call last):
+  File "e:\python projects\eventza\venv\lib\site-packages\sqlalchemy\util\_collections.py", line 1008, in __call__
+    return self.registry[key]
+KeyError: <greenlet.greenlet object at 0x00000159F1ADF300 (otid=0x00000159F15A6040) current active started main>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\python projects\eventza\venv\lib\site-packages\flask\app.py", line 2051, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\python projects\eventza\venv\lib\site-packages\flask\app.py", line 1501, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\python projects\eventza\venv\lib\site-packages\flask\app.py", line 1499, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\python projects\eventza\venv\lib\site-packages\flask\app.py", line 1485, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "E:\Python Projects\Eventza4\event_portal\app\routes.py", line 49, in register
+    if form.validate_on_submit():
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_wtf\form.py", line 100, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "e:\python projects\eventza\venv\lib\site-packages\wtforms\form.py", line 318, in validate
+    return super(Form, self).validate(extra)
+  File "e:\python projects\eventza\venv\lib\site-packages\wtforms\form.py", line 150, in validate
+    if not field.validate(self, extra):
+  File "e:\python projects\eventza\venv\lib\site-packages\wtforms\fields\core.py", line 226, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "e:\python projects\eventza\venv\lib\site-packages\wtforms\fields\core.py", line 246, in _run_validation_chain
+    validator(form, self)
+  File "E:\Python Projects\Eventza4\event_portal\app\forms.py", line 21, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 552, in __get__
+    return type.query_class(mapper, session=self.sa.session())
+  File "e:\python projects\eventza\venv\lib\site-packages\sqlalchemy\orm\scoping.py", line 129, in __call__
+    return self.registry()
+  File "e:\python projects\eventza\venv\lib\site-packages\sqlalchemy\util\_collections.py", line 1010, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "e:\python projects\eventza\venv\lib\site-packages\sqlalchemy\orm\session.py", line 4065, in __call__
+    return self.class_(**local_kw)
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 176, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 998, in engine
+    return self.get_engine()
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 1017, in get_engine
+    return connector.get_engine()
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 593, in get_engine
+    sa_url, options = self.get_options(sa_url, echo)
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 608, in get_options
+    sa_url, options = self._sa.apply_driver_hacks(self._app, sa_url, options)
+  File "e:\python projects\eventza\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 933, in apply_driver_hacks
+    if sa_url.drivername.startswith('mysql'):
+AttributeError: 'NoneType' object has no attribute 'drivername'
