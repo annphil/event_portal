@@ -8,7 +8,7 @@ Team Members
 - Christopher Roy
 - Sreya Sabu
 
-Steps to follow inside cmd to open Project in Google Browser
+Steps to follow inside cmd to open Project in development env in Google Browser
 1) After cloning cd into event_portal
 2) Copy Paste the following
    - set FLASK_APP=eventza.py
@@ -17,3 +17,8 @@ Steps to follow inside cmd to open Project in Google Browser
 3) Use this to open the project in your browser -
 
     http://localhost:5000/index     or    http://localhost:5000/
+
+
+App Link
+https://eventza.herokuapp.com/     
+
