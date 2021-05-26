@@ -2,12 +2,12 @@
 
 #Eventza
 
-Eventza is an event portal for our college. A person should register(if he/she doesn't have an account already) and then log in to see upcoming events and to register for them. A user can create an event as well. 
+Eventza is an event portal for our college. A person can register(if he/she doesn't have an account already) and then log in to see upcoming events and to register for them.
 
 ## Team members
-- Annamma T Philip  - 
-- Christopher Roy
-- Sreya Sabu
+- Annamma T Philip   https://github.com/annphil
+- Christopher Roy  https://github.com/ChrizRoy
+- Sreya Sabu   https://github.com/SREYASABU
 ## Team Id 
 BFH/recgtT8HqhB48Hytd/2021
 ## Link to product walkthrough
@@ -46,7 +46,7 @@ WTForms==2.3.3
 ## How to configure
 Clone https://github.com/annphil/event_portal.git
 
-## How to Run
+## How to Run in development environment
 Steps to follow inside cmd to open Project in development env in Google Browser
 1) After cloning cd into event_portal
 2) Copy Paste the following
