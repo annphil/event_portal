@@ -11,7 +11,7 @@ Eventza is an event portal for our college. A person can register(if he/she does
 ## Team Id 
 BFH/recgtT8HqhB48Hytd/2021
 ## Link to product walkthrough
-https://www.loom.com/share/28ee0005e871419cad3d5f9eef3007cf
+https://www.loom.com/share/08d14a147a514b5c9716d80ef108ffb8
 
 ## How it Works ?
 It is coded in Python using Flask as web framework
